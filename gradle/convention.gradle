@@ -85,7 +85,7 @@ subprojects { project ->
 // }
 
 // githubPages {
-//     repoUri = "git@github.com:Netflix/${rootProject.githubProjectName}.git"
+//     repoUri = "git@github.com:TangoMe/${rootProject.githubProjectName}.git"
 //     pages {
 //         docTasks.each { shortName, docTask ->
 //             from(docTask.outputs.files) {

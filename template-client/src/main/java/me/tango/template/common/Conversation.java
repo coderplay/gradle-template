@@ -1,4 +1,4 @@
-package com.netflix.template.common;
+package me.tango.template.common;
 
 /**
  * Hold a conversation.

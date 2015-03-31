@@ -1,7 +1,7 @@
-package com.netflix.template.server;
+package me.tango.template.server;
 
-import com.netflix.template.common.Conversation;
-import com.netflix.template.common.Sentence;
+import me.tango.template.common.Conversation;
+import me.tango.template.common.Sentence;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.DELETE;

@@ -1,7 +1,7 @@
-package com.netflix.template.client;
+package me.tango.template.client;
 
-import com.netflix.template.common.Conversation;
-import com.netflix.template.common.Sentence;
+import me.tango.template.common.Conversation;
+import me.tango.template.common.Sentence;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.filter.LoggingFilter;

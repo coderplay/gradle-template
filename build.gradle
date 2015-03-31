@@ -23,7 +23,7 @@ apply from: file('gradle/license.gradle')
 apply from: file('gradle/release.gradle')
 
 subprojects {
-  group = "com.netflix.${githubProjectName}" // TEMPLATE: Set to organization of project
+  group = "me.tango.${githubProjectName}" // TEMPLATE: Set to organization of project
 
   dependencies {
     compile     'javax.ws.rs:jsr311-api:1.1.1'

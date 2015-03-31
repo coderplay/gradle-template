@@ -1,4 +1,4 @@
-This project represents a template for what a Netflix OSS project should look like. We're striving for a pure Gradle build, instead of taking a consolidated plugin approach, as we would internally. This will maintain each project's isolation and keep the build as transparent as possible to the outside world. While at the same time we want to be able to push out build updates in a predictable fashion. 
+This project represents a template for what a TangoMe OSS project should look like. We're striving for a pure Gradle build, instead of taking a consolidated plugin approach, as we would internally. This will maintain each project's isolation and keep the build as transparent as possible to the outside world. While at the same time we want to be able to push out build updates in a predictable fashion. 
 
 There are three branches for which you should concern yourself with:
 * master - Template of a fully working multi-module project. It's a good starting place if you're starting from scratch.
@@ -24,12 +24,12 @@ The template features:
 
 ## Merging build files
 
-Merging in the build should be a four step process: merge, customize, test and delete pom.xml. In general, this is only done once and while we work out the kinks, Engineering Tools is willing to do the initial port to Gradle and provide a pull request, just contact EngineeringTools@netflix.com
+Merging in the build should be a four step process: merge, customize, test and delete pom.xml. In general, this is only done once and while we work out the kinks, Engineering Tools is willing to do the initial port to Gradle and provide a pull request, just contact EngineeringTools@tango.me
 
 ### Merging
 This will pull in the template:
 
-    git remote add --track $BRANCH build git@github.com:Netflix/gradle-template.git
+    git remote add --track $BRANCH build git@github.com:TangoMe/gradle-template.git
     git fetch build
     git merge build/$BRANCH
 
@@ -57,12 +57,12 @@ As updates are put into the gradle-template project, individual OSS Projects wil
 
 ## Artifactory
 
-By itself the above build.gradle will pull from Maven Central and publish to Maven Central, to use Netflix infrastructure we provide an "init script" to orchestrate Gradle to use artifacts.netflix.com. This pulls in artifactory.gradle, which is sourced from //depot/Tools/nebula-boot/artifactory.gradle. It's job is to:
+By itself the above build.gradle will pull from Maven Central and publish to Maven Central, to use TangoMe infrastructure we provide an "init script" to orchestrate Gradle to use artifacts.tango.me. This pulls in artifactory.gradle, which is sourced from //depot/Tools/nebula-boot/artifactory.gradle. It's job is to:
 
 * Set ivy cache directory to a Jenkins friendly one
 * Add jfrog build-into plugin to classpath, add it as a plugin and configure it to publish to {{libs-$\{project.status}-local}}
 * Remove all repositories
-* Add artifacts.netflix.com/ext-releases-local as the only repository
+* Add artifacts.tango.me/ext-releases-local as the only repository
 
 Two targets available to use artifactoryi:
 * uploadArtifactory - Call out to compile against internal repository

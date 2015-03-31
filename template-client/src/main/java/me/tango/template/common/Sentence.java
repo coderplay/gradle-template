@@ -1,4 +1,4 @@
-package com.netflix.template.common;
+package me.tango.template.common;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
