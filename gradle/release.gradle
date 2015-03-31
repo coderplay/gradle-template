@@ -1,4 +1,4 @@
-apply plugin: 'release'
+apply plugin: 'net.researchgate.release'
 
 [ uploadIvyLocal: 'uploadLocal', uploadArtifactory: 'artifactoryPublish', buildWithArtifactory: 'build' ].each { key, value ->
     // Call out to compile against internal repository
